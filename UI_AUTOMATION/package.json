@@ -1,0 +1,21 @@
+{
+  "name": "ui_automation",
+  "version": "1.0.0",
+  "description": "UI Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "author": "dedybastiant",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "0.9.21",
+    "nightwatch-cucumber": "^9.1.3",
+    "cucumber": "^4.2.1",
+    "cucumber-pretty": "^1.4.4"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.46.0",
+    "selenium-standalone": "^6.16.0"
+  }
+}
