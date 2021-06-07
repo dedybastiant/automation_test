@@ -1,4 +1,5 @@
 const chromedriver = require('chromedriver');
+const seleniumServer = require("selenium-server");
 
 require('nightwatch-cucumber')({
   nightwatchOutput: true,
@@ -10,21 +11,25 @@ require('nightwatch-cucumber')({
 });
 
 const nightwatchConfig = {
+  test_workers: false,
   page_objects_path: 'tests/page-objects',
   output_folder: 'reports',
   src_folders: ['tests'],
-  webdriver: {
-    start_process: true,
-    server_path: "node_modules/.bin/chromedriver",
-    port: 9515
+
+  selenium: { // selenium configuration settings
+    start_process: true, // tells nightwatch to manage the selenium process
+    server_path: seleniumServer.path, // path to selenium
+    host: '127.0.0.1', // host for selenium
+    port: '4444', // port for selenium
   },
 
   test_settings: {
     default: {
-      desiredCapabilities: {
-        browserName: 'chrome'
-      },
-    },
+      launch_url: 'https://nightwatchjs.org',
+      desiredCapabilities : {
+        browserName : 'chrome',
+      }
+    }
   }
 }
 
