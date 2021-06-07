@@ -4,7 +4,7 @@
   "description": "UI Automation",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "./node_modules/nightwatch/bin/nightwatch --config nightwatch.conf.js"
   },
   "author": "dedybastiant",
   "license": "ISC",
