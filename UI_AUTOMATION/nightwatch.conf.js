@@ -10,20 +10,17 @@ require('nightwatch-cucumber')({
 });
 
 const nightwatchConfig = {
-  test_workers: false,
   page_objects_path: 'tests/page-objects',
   output_folder: 'reports',
   src_folders: ['tests'],
+  webdriver: {
+    start_process: true,
+    server_path: "node_modules/.bin/chromedriver",
+    port: 9515
+  },
 
   test_settings: {
     default: {
-      selenium_host: 'localhost',
-      selenium_port: 4444,
-      screenshots: {
-        enabled : true,
-        on_failure : true,
-        path : ''
-      },
       desiredCapabilities: {
         browserName: 'chrome'
       },
