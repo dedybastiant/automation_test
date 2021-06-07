@@ -15,14 +15,18 @@ When(/^user click searchbox$/, () => {
   return browser.clickSearchBox();
 });
 
+When(/^user click search button$/, () => {
+  return browser.clickSearchButton();
+});
+
 When(/^user input keyword "([^"]*)"$/, (keyword) => {
   return browser.inputSearchKeyword(keyword);
 });
 
 Then(/^user will see search result label of "([^"]*)"$/, (keyword) => {
-  return browser.assertScreenSizeFilter(keyword);
+  return browser.assertSearchResultLabel(keyword);
 });
 
 Then(/^user will see the first item contain keyword "([^"]*)"$/, (keyword) => {
-  return browser.assertScreenSizeFilter(keyword);
+  return browser.assertFirstItemDesc(keyword);
 });

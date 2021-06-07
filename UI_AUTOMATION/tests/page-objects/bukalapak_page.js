@@ -6,10 +6,10 @@ const bukalapak = {
     return url;
   },
   elements: { 
-    searchBox: '//*[@id="v-omnisearch__input"]',
-    searchBtn: '//*[@id="v-omnisearch"]/button',
-    resultLabel : './/h1[b]',
-    firstProductDescription: '(//div[@class="bl-product-card__description-name"]/p/a)[1]',
+    searchBox: '#v-omnisearch__input',
+    searchBtn: '#v-omnisearch>button',
+    resultLabel : 'h1>b',
+    firstProductDescription: '.bl-product-card__description-name>p>a',
   },
   commands: [{
     navigateToHomePage() {
