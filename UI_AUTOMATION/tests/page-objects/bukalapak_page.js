@@ -6,8 +6,8 @@ const bukalapak = {
     return url;
   },
   elements: { 
-    searchBox: '//input[@name="search[keywords]"]',
-    searchBtn: '//button[@class="v-omnisearch__submit"]',
+    searchBox: '//*[@id="v-omnisearch__input"]',
+    searchBtn: '//*[@id="v-omnisearch"]/button',
     resultLabel : './/h1[b]',
     firstProductDescription: '(//div[@class="bl-product-card__description-name"]/p/a)[1]',
   },
