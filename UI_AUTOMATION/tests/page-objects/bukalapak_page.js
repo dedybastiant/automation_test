@@ -8,8 +8,8 @@ const bukalapak = {
   elements: { 
     searchBox: '#v-omnisearch__input',
     searchBtn: '#v-omnisearch>button',
-    resultLabel : 'h1>b',
-    firstProductDescription: '.bl-product-card__description-name>p>a',
+    resultLabel : '.mt-12>h1',
+    firstProductDescription: '.bl-product-card-new__name>p>a',
   },
   commands: [{
     navigateToHomePage() {

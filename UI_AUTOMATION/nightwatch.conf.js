@@ -1,4 +1,3 @@
-const chromedriver = require('chromedriver');
 const seleniumServer = require("selenium-server");
 
 require('nightwatch-cucumber')({
